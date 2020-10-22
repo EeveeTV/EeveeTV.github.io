@@ -1,33 +1,117 @@
 <html>
 <head>
+<link rel="stylesheet" href="Desktop/highlight/styles/default.css">
+<script src="Desktop/highlight/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
 <title>Syrup</title>
 <link rel="stylesheet" type="text/css" href="syrup.css" />
-<nav style = "text-align:right;color:Blue;background:#fff;text-decoration:none;font-family:calibri;">
-			<a href="index.html" style = "text-decoration:none;color:black">Home</a> |
+<nav style = "text-align:right;color:Blue;background:#000;text-decoration:none;font-family:calibri;">
+			<a href="index.html" style = "text-decoration:none;color:white">Home</a> |
   
 			
 			<a href="PythonDiscordBot.html" style = "text-decoration:none;color:powderblue">Python Discord Bot</a> |
   
 			
-			<a href="http://fakebsod.com/windows-8-and-10" style = "text-decoration:none;color:black">Syrup (Broken)</a> |
+			<a href="http://fakebsod.com/windows-8-and-10" style = "text-decoration:none;color:white">Syrup (Broken)</a> |
   
 			
-			<a href="PokeHub.html" style = "text-decoration:none;color:black;">PokeHub</a>
+			<a href="PokeHub.html" style = "text-decoration:none;color:white;">PokeHub</a>
 		</nav>
 		<meta property="og:type" content="website">
 			<meta property="og:title" content="Python Discord Bot" />
 			<meta property="og:description" content="Code a Discord Bot in Python!" />
 			<meta property="og:url" content="https://eeveetv.github.io/PythonDiscordBot.html" />
 			<meta property="og:image" content="https://i.pinimg.com/originals/21/ba/b8/21bab8f85f756358114e91b159cc5414.gif" />
+<link rel="icon" type="image/png" href="download (1).png">
 </head>
 <body>
 <div class = "solid">
-<h1 style = "font-family:Helvetica;text-align:center;Color:green;">
+<h1 style = "font-family:Helvetica;text-align:center;Color:Powderblue;">
 Code a Discord Bot
 </h1>
 </div>
-<h2 style = "font-family:Helvetica;text-align:center;Color:Red;">
-Un-Finished
-</h2>
+<div class="border-gradient">
+  <div style = "font-family:Helvetica;color:white;font-size:30px;text-align:Center;background-color:black">
+  <div>
+    The Basics
+  </div>
+  </div>  
+</div>
+<p style = "color:white">
+Alright, so, to start making your Discord Bot, you need to install the nessesary components.
+</p>
+<ul style = "color:powderblue;text-decoration:none;font-family:helvetica">
+  <li><a href="https://python.org/download"  style = "color:powderblue;" >Python</a></li>
+  <li><a href="https://discordpy.readthedocs.io"  style = "color:powderblue;" >discord.py*</a></li>
+  <li><a href="https://notepad-plus-plus.org"  style = "color:powderblue;" >Notepad++</a>, <a href="https://atom.io"  style = "color:powderblue;" >Atom</a>, <a href="https://code.visualstudio.com"  style = "color:powderblue;" >Visual Studio Code</a>, or your favourite text editor.</li>
+</ul>
+<div style = "color:white">
+Make a folder, open Command Prompt (cmd.exe) (Terminal if MacOS/Linux), and do <samp>cd {folder location}</samp>, then run <samp>py -3 -m pip install -U discord.py</samp> for Windows, or <samp>python3 -m pip install -U discord.py</samp> for MacOS and Linux.
+</div>
+<div class="border-gradient">
+  <div style = "font-family:Helvetica;color:white;font-size:30px;text-align:Center;background-color:black">
+  <div>
+    Getting the file ready
+  </div>
+  </div>  
+</div>
+<p style = "color:white">
+Once you have installed all of them, make a <samp>bot.py</samp> file. So it should look like: <img src="folder.png" alt="Folder"> <br><br>Please note the picture of the file will be different to yours, as I use Notepad++ as my text editor.<br><br><br>Open the file with your text editor, and make it the main app for <samp>.py</samp> files (Not nessesary), and put this code in it:
+</p>
+<pre>
+import discord
+from discord.ext import commands
+
+
+
+client = commands.Bot(command_prefix = '!')
+
+client.run('')
+</pre>
+<div class="border-gradient">
+  <div style = "font-family:Helvetica;color:white;font-size:30px;text-align:Center;background-color:black">
+  <div>
+    Creating the bot
+  </div>
+  </div>  
+</div>
+<p>
+Alright, file, check, everything installed, check, now to making the bot.<br><br>So, to get started, visit the <a href = "https://discord.com/developers">Discord Developer Portal</a>, and go Create Application. Name it whatever you want (e.g. BeepBoop). Then click bot and Create Bot. Click yes. Next, copy the token and put it in the <samp>bot.py</samp> where it says <samp>client.run('token')</samp> (replace token with the token). Now remember this, DO NOT SHARE YOUR TOKEN WITH ANYONE.
+</p>
+<div class="border-gradient">
+  <div style = "font-family:Helvetica;color:white;font-size:30px;text-align:Center;background-color:black">
+  <div>
+    Making a command
+  </div>
+  </div>  
+</div>
+<p>
+This is very simple, it is a simple group of code, and can be edited and pasted to make more commands. Below is the code.
+</p>
+<pre>
+@client.command()
+async def ping(ctx):
+    await ctx.send(f'Pong!')
+</pre>
+<p>
+So, if you have done it correctly, this is what you should have.
+</p>
+<pre>
+import discord
+from discord.ext import commands
+
+
+
+client = commands.Bot(command_prefix = '!')
+
+@client.command()
+async def ping(ctx):
+    await ctx.send(f'Pong!')
+
+client.run('NzY3asfGHysdggjsabHO.ThisIs.NoT_aLEGittOkenM8soIGNoRe')
+</pre>
 </body>
+<footer  style = "font-family:Helvetica;color:white;font-size:8px;background-color:black">
+EeveeTV, Owner of the site.
+</footer>
 </html>

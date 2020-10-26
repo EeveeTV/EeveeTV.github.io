@@ -1,0 +1,11 @@
+h1 {
+border: 0px solid transparent;
+    border-radius: 100px;
+    background: 
+        linear-gradient(15deg, red , blue); 
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+    padding: 20px;
+} p {
+	font-family: Helvetica;
+}

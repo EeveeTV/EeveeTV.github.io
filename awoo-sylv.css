@@ -1,12 +1,6 @@
-top {
-	font-family: 'Roboto';
-} h {
+} h1 {
 	font-size: 30px;
 	align: center;
-}
-} navbar {
-	font-family: helvetica;
-	font-size: 14px
 } .otherlnk {
 	color: black;
 	text-decoration: none;
